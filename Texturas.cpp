@@ -8,7 +8,6 @@
 #include <time.h>
 #include <math.h>
 #include <iostream>
-
 using namespace std;//
 static int lados = 0;
 static double pi = 3.14159265358979323846;
