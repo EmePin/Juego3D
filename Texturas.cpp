@@ -11,6 +11,7 @@
 
 using namespace std;//
 static int lados = 0;
+
 static double pi = 3.14159265358979323846;
 static double x = 0.7, y = 0.0, z = -0.1;
 static double tras = 0.1;
