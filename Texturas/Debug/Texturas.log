@@ -1,0 +1,6 @@
+﻿  Texturas.cpp
+d:\aims2\ito\6 semestre\graficacion\texturas\texturas\texturas.cpp(849): warning C4102: 'sa3': etiqueta sin referencia
+d:\aims2\ito\6 semestre\graficacion\texturas\texturas\texturas.cpp(864): warning C4102: 'fuera': etiqueta sin referencia
+d:\aims2\ito\6 semestre\graficacion\texturas\texturas\texturas.cpp(887): warning C4102: 'sig': etiqueta sin referencia
+  Texturas.vcxproj -> D:\AIMS2\ito\6 semestre\graficacion\Texturas\Texturas\Debug\Texturas.exe
+  Texturas.vcxproj -> D:\AIMS2\ito\6 semestre\graficacion\Texturas\Texturas\Debug\Texturas.pdb (Full PDB)
