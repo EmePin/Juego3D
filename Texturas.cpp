@@ -43,8 +43,7 @@ bool salir = false;
 static char* texto = "Dispara a todos los objetivos";
 static int angulo = 0;
 static int direccion[] = { 0,30,60,90,120,150,180,210,240,270,300,330 };
-static int matriz[144][27] = {
-{ 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 },
+static int matriz[144][27] = {{ 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 },
 { 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 },
 { 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 },
 { 1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1 },
@@ -472,8 +471,8 @@ void mostrarArma() {
 	//Frente
 	glPushMatrix();
 	glColor4f(1.0f, 0.0f, 0.0f, 0.0f);
-	glTranslatef(-1.25f, -1.8f, -1.2f);
-	glScalef(2.5f, 1.3f, 0.0f);
+	glTranslatef(-0.5f, -2.025f, -1.1f);
+	glScalef(1.0f, 1.3f, 0.0f);
 	glRectd(0.0f, 0.0f, 1.0f, 1.0f);
 	glEnd();
 	glPopMatrix();
@@ -481,18 +480,18 @@ void mostrarArma() {
 	//Volante
 	glPushMatrix();
 	glColor3f(0.1f, 0.1f, 0.1f);
-	glTranslatef(-0.5f, -1.0f, -0.85f);
-	glScalef(0.12f, 0.12f, 0.1f);
-	gluSphere(gluNewQuadric(), 3, 100, 100);
+	glTranslatef(-0.2f, -0.8f, -0.85f);
+	glScalef(0.1f, 0.1f, 0.1f);
+	gluSphere(gluNewQuadric(), 2, 500, 500);
 	glEnd();
 	glPopMatrix();
 
 	//Lateral derecho
 	glPushMatrix();
 	glColor4f(1.0f, 0.0f, 0.0f, 0.0f);
-	glTranslatef(1.1f, -1.2f, -.9);
+	glTranslatef(0.38f, -1.0f, -.8);
 	glRotatef(90.0f, .0f, .0f, 1.0f);
-	glScalef(.30, -.1, .1);
+	glScalef(.30, -0.05, .1);
 	gluSphere(gluNewQuadric(), 3, 100, 100);
 	glEnd();
 	glPopMatrix();
@@ -500,9 +499,9 @@ void mostrarArma() {
 	//Lateral Izquierdo
 	glPushMatrix();
 	glColor4f(1.0f, 0.0f, 0.0f, 0.0f);
-	glTranslatef(-1.1f, -1.2f, -.9);
-	glRotatef(90.0f, .0f, .0f, 1.0f);
-	glScalef(.30, -0.1f, .1);
+	glTranslatef(-0.38f, -1.0f, -.8);
+	glRotatef(270.0f, .0f, 0.0f, 2.0f);
+	glScalef(.30, -0.05f, .1);
 	gluSphere(gluNewQuadric(), 3, 100, 100);
 	glEnd();
 	glPopMatrix();
@@ -1048,10 +1047,10 @@ static void key(unsigned char key, int x, int y) {
 
 void avanzar() {
 	key('w', 0, 0);
-	sleep_for(milliseconds(300));
+	sleep_for(milliseconds(250));
 }
 
-void colocar() {//?
+void colocar() {
 	
 	for (int j = 0; j<6; j++) {
 		key('.', 0, 0);
@@ -1211,7 +1210,7 @@ void display(void) {
 	drawString(texto);
 
 	glutSwapBuffers();
-	//avanzar();
+	avanzar();
 }
 
 void reshape(int width, int height){
