@@ -6,11 +6,11 @@ El proyecto es un videojuego 3D para la materia de Graficación en el que un aut
 
 ### Pre-requisitos 📋
 
-_Cosas necesitas para instalar el software y como instalarlas_
+_Cosas que necesitas para instalar el software y cómo instalarlas_
 
   1.- Se necesita visual studio 2015: [Descarga](https://github.com/Villanuevand) 😊
   
-  2.- Configurar glut en el visual: [Librerías](https://www.opengl.org/resources/libraries/glut/glutdlls37beta.zip), [Configuración](https://www.youtube.com/watch?v=8p76pJsUP44&t=40s), [Configuración2](https://github.com/EmePin/Juego3D/blob/main/glutVisualSC.pdf)
+  2.- Configurar glut en el visual: [Librerías](https://www.opengl.org/resources/libraries/glut/glutdlls37beta.zip), [Configuración](https://github.com/EmePin/Juego3D/blob/main/glutVisualSC.pdf)
   
   3.- Configurar plataforma de destino y herramienta de plataforma de destino: 
   ![image](https://user-images.githubusercontent.com/57578552/171219132-851bb7d1-5d22-4772-b0a7-3cc42f981d5d.png)
