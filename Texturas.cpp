@@ -43,7 +43,7 @@ bool salir = false;
 static char* texto = "Dispara a todos los objetivos";
 static int angulo = 0;
 static int direccion[] = { 0,30,60,90,120,150,180,210,240,270,300,330 };
-static int matriz[144][27] = {{ 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 },
+static int matriz[144][27] = { { 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 },
 { 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 },
 { 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 },
 { 1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1 },
@@ -187,102 +187,88 @@ static int matriz[144][27] = {{ 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
 { 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 },
 { 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 },
 { 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 } };
-	static int cuadros[36][9] = {
-		{ 1,1,1,1,1,1,1,1,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,1,1,1,1,1,1,1,1 } };
+static int cuadros[36][9] = {
+	{ 1,1,1,1,1,1,1,1,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,1,1,1,1,1,1,1,1 } };
 
-	static int pista[36][9] = {
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,0,0,0,0,0,0,0,1 },
-		{ 1,1,1,1,1,1,1,1,1 } };
+static int pista[36][9] = {
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,0,0,0,0,0,0,0,1 },
+	{ 1,1,1,1,1,1,1,1,1 } };
 static int posz = 34, posx = 41;
 static int esferas[5][2];
 using namespace std;
 static int piezas[5] = { 0,0,0,0,0 };
 static int contador = 0;
-static int posiblesCuadros[62][2] = { 
-{ 37,34 },{ 4,4 },{ 7,4 },{ 14,4 },{ 16,4 },
-{ 13,5 },{ 12,25 },{ 22,11 },{ 31,20 },{ 23,28 },
-{ 17,34 },{ 4,30 },{ 13,16 },{ 33,7 },{ 38,13 },
-{ 33,28 },{ 13,18 },{ 35,37 },{ 22,40 },{ 6,46 },
-{ 10,40 },{ 19,48 },{ 47,10 },{ 66,4 },{ 63,22 },
-{ 43,19 },{ 56,4 },{ 56,34 },{ 51,22 },{ 38,49 },
-{ 40,43 },{ 46,30 },{ 10,54 },{ 25,48 },{ 15,52 },
-{ 55,49 },{ 16,52 },{ 57,28 },{ 58,10 },{ 43,4 },
-{ 28,13 },{ 2,2 },{ 50,15 },{ 55,40 },{ 67,30 },
-{ 61,26 },{ 19,20 },{ 59,43 },{ 67,43 },{ 67,52 },
-{ 67,61 },{ 33,55 },{ 13,58 },{ 67,74 },{ 4,67 },
-{ 16,67 },{ 49,76 },{ 43,76 },{ 22,67 },{ 58,55 },
-{ 49,59 },{ 32,73 } };
 
-GLuint _pared,_cubito,_suelo,_cielo,_concreto,_borde; 
+GLuint _pared, _cubito, _suelo, _cielo, _concreto, _borde;
 
 
 GLuint loadTexture(Image* image) {
@@ -315,7 +301,7 @@ void initRendering() {
 	delete sky;
 	delete concreto;
 	delete borde;
-	}
+}
 
 void cargarTextura(GLuint _textura) {
 	glEnable(GL_TEXTURE_2D);
@@ -447,32 +433,12 @@ void generarCubo(int xmet, int zmet)
 
 }
 
-void drawSphere(int x,int z) {
-	glPushMatrix();
-	glRotated(r, 0, 1, 0);
-	glTranslatef(xx + x, 1.1, zz + z);
-	glScalef(.1, .1, .1);
-	glColor3f(1.0, 0.8, 0.6);
-	glTexCoord2f(0.0f, 0.0f);
-	glVertex3f(-0.5, -0.5, 0.5);
-	glTexCoord2f(1.0f, 0.0f);
-	glVertex3f(-0.5, 0.5, 0.5);
-	glTexCoord2f(1.0f, 1.0f);
-	glVertex3f(0.5, 0.5, 0.5);
-	glTexCoord2f(0.0f, 1.0f);
-	glVertex3f(0.5, -0.5, 0.5);
-	gluSphere(gluNewQuadric(), 3, 100, 100);
-	glEnd();
-	glPopMatrix();
-}
-
 void mostrarArma() {
-
 	//Frente
 	glPushMatrix();
 	glColor4f(1.0f, 0.0f, 0.0f, 0.0f);
 	glTranslatef(-0.5f, -2.025f, -1.1f);
-	glScalef(1.0f, 1.3f, 0.0f);
+	glScalef(1.0f, 1.5f, 0.0f);
 	glRectd(0.0f, 0.0f, 1.0f, 1.0f);
 	glEnd();
 	glPopMatrix();
@@ -480,7 +446,7 @@ void mostrarArma() {
 	//Volante
 	glPushMatrix();
 	glColor3f(0.1f, 0.1f, 0.1f);
-	glTranslatef(-0.2f, -0.8f, -0.85f);
+	glTranslatef(-0.2f, -0.9f, -0.85f);
 	glScalef(0.1f, 0.1f, 0.1f);
 	gluSphere(gluNewQuadric(), 2, 500, 500);
 	glEnd();
@@ -604,12 +570,11 @@ void generarCubito(int x, int z)
 	glVertex3f(0.5, -0.5, -0.5);
 	glEnd();
 	glPopMatrix();
-
 }
 
 void mostrarcuadros()
 {
-	int x = -6, z =-42, i, j;
+	int x = -6, z = -42, i, j;
 
 	for (i = 0; i<36; i++)
 	{
@@ -672,65 +637,6 @@ static void key(unsigned char key, int x, int y) {
 		r = direccion[angulo];
 		break;
 
-	case '+':
-
-
-		if (bandera == 1) {
-			esferasx = (esferas[contador][0]) + 34;
-			esferasz = (esferas[contador][1]) + 41;
-		}
-		_asm {
-			CMP bandera, 1
-			JNE bye
-			MOV EAX, posx
-			CMP esferasx, EAX
-			JNE bye
-			MOV EAX, posz
-			CMP esferasz, EAX
-			JNE bye
-			MOV	banderaYO, 1
-			INC contador
-			bye :
-		}
-
-		if (banderaYO == 1) {
-			piezas[contador] = 1;
-			texto = "Has encontrado la pieza correcta!";
-			matriz[masx][masz] = 0;
-
-			int l;
-			comprobar = 0;
-			for (l = 0; l < 5; l++)
-			{
-				if (piezas[l] == 1)
-				{
-					comprobar = comprobar + 1;
-				}
-			}
-
-			if (comprobar == 5)
-			{
-				texto = "VE A BUSCAR LA SALIDA";
-				salir = true;
-				matriz[69][3] = 0;
-				matriz[69][4] = 0;
-				matriz[69][5] = 0;
-				matriz[70][3] = 0;
-				matriz[70][4] = 0;
-				matriz[70][5] = 0;
-				matriz[71][3] = 0;
-				matriz[71][4] = 0;
-				matriz[71][5] = 0;
-			}
-
-		}
-		else {
-			texto = "Sigue intentando con otra pieza!";
-		}
-
-
-		break;
-
 	case 'a':
 		if (teclaD == 3) {
 			teclaD = 2;
@@ -761,10 +667,6 @@ static void key(unsigned char key, int x, int y) {
 			r = direccion[angulo];
 		}
 
-		cout << teclaA << endl;
-		cout << teclaD << endl;
-		//cout << angulo << endl;
-		//cout << r << endl;
 		break;
 	case 'd':
 		if (teclaA == 3) {
@@ -802,10 +704,6 @@ static void key(unsigned char key, int x, int y) {
 		}
 
 		r = direccion[angulo];
-		cout << teclaA << endl;
-		cout << teclaD << endl;
-		//cout << angulo << endl;
-		//cout << r << endl;
 		break;
 	case 'w':
 
@@ -839,13 +737,13 @@ static void key(unsigned char key, int x, int y) {
 			if (bandera1 == 1)
 			{
 				aux1 = matriz[masx][masz];
-				if(aux1==3){
-				texto="CHOCASTE, HAS PERDIDO";
+				if (aux1 == 3) {
+					texto = "CHOCASTE, HAS PERDIDO";
 				}
 				if (aux1 == 1) {
 					texto = "HAS GANADO";
 				}
-				
+
 			}
 
 			_asm {
@@ -862,7 +760,6 @@ static void key(unsigned char key, int x, int y) {
 
 			if (bandera2 == 1)
 			{
-				cout << "NO entre" << endl;
 				zz = zz + 1;
 				posx = posx - 1;
 			}
@@ -884,11 +781,6 @@ static void key(unsigned char key, int x, int y) {
 					  JMP nada2
 					  exito : MOV bandera3, 1
 							  nada2 :
-			}
-			if (bandera3 == 1)
-			{
-				texto = "HAS LLEGADO AL FINAL";
-
 			}
 		}
 		_asm {
@@ -940,7 +832,7 @@ static void key(unsigned char key, int x, int y) {
 								 nada6 :
 		}
 		if (flag == 3) {
-			
+
 			if (bandera7 == 1)
 			{
 				aux1 = matriz[masx][masz];
@@ -971,12 +863,6 @@ static void key(unsigned char key, int x, int y) {
 					   JMP nada8
 					   exito8 : MOV bandera9, 1
 								nada8 :
-			}
-
-			if (bandera9 == 1)
-			{
-
-				texto = "¡HAS LLEGADO AL FINAL!";
 			}
 		}
 
@@ -1031,12 +917,6 @@ static void key(unsigned char key, int x, int y) {
 						exito11 : MOV bandera12, 1
 								  nada11 :
 			}
-
-			if (bandera12 == 1)
-			{
-
-				texto = "¡HAS LLEGADO AL FINAL!";
-			}
 		}
 
 		break;
@@ -1047,11 +927,11 @@ static void key(unsigned char key, int x, int y) {
 
 void avanzar() {
 	key('w', 0, 0);
-	sleep_for(milliseconds(250));
+	sleep_for(milliseconds(150));
 }
 
 void colocar() {
-	
+
 	for (int j = 0; j<6; j++) {
 		key('.', 0, 0);
 	}
@@ -1119,11 +999,11 @@ void mostrarPiso()
 	{
 		for (j = 0; j<9; j++)
 		{
-			if (pista[i][j] == 0 ) {
+			if (pista[i][j] == 0) {
 				generarPiso(x, z);
 			}
 			else if (pista[i][j] == 1) {
-				generarBorde(x,z);
+				generarBorde(x, z);
 			}
 			x = x + 3;
 		}
@@ -1137,7 +1017,7 @@ void display(void) {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	glColor3d(0.5, 0.5, 0.5);
-	
+
 	glDepthFunc(GL_LEQUAL);
 	glEnable(GL_DEPTH_TEST);
 	glClearDepth(1.0);
@@ -1191,12 +1071,10 @@ void display(void) {
 		for (j = 0; j<27; j++)
 		{
 			if (matriz[i][j] == 3)
-			{	
-
+			{
 				glColor3d(0.6, 0.6, 0.6);
 				generarCubito(x, z);
-				glColor4f(2.0, 1.0, 1.0,0);
-				//drawSphere(x,z);
+				glColor4f(2.0, 1.0, 1.0, 0);
 			}
 			x = x + 1;
 		}
@@ -1205,7 +1083,7 @@ void display(void) {
 	}
 
 	glRasterPos3f(-0.4, 0, -1);
-	
+
 	glPushMatrix();
 	drawString(texto);
 
@@ -1213,7 +1091,7 @@ void display(void) {
 	avanzar();
 }
 
-void reshape(int width, int height){
+void reshape(int width, int height) {
 	const float ar = (float)width / (float)height;
 	double aspect = height / width;
 	glViewport(0, 0, width, height);
@@ -1227,46 +1105,8 @@ static void idle(void)
 {
 	glutPostRedisplay();
 }
-void timer(int value) {
-	glutPostRedisplay();      // Post re-paint request to activate display()
-	glutTimerFunc(refreshMills, timer, 0); // next timer call milliseconds later
-}
-
-void genesferas()
-{
-	srand(time(0));
-	for (int k = 0; k<5; k++)
-	{
-		int num1 = (int)rand() % 62;
-		int pos0 = (posiblesCuadros[num1][1] - 34);
-		int pos1 = (posiblesCuadros[num1][0] - 41);
-		bool flag = true;
-		for (int n = 0; n<5; n++)
-		{
-			if (esferas[n][0] == pos0 && esferas[n][1] == pos1)
-			{
-				flag = false;
-			}
-		}
-
-		if (flag)
-		{
-			esferas[k][0] = pos0;
-			printf("esferas 0: %d", esferas[k][0] + 34);
-			esferas[k][1] = pos1;
-			printf("esferas 1: %d\n", esferas[k][1] + 41);
-			matriz[posiblesCuadros[num1][0]][posiblesCuadros[num1][1]] = 3;
-		}
-		else {
-			k--;
-		}
-
-	}
-}
-
 
 int main(int argc, char **argv) {
-	//genesferas();
 	glutInit(&argc, argv);
 	glutInitWindowSize(1000, 500);
 	glutInitWindowPosition(0, 0);
