@@ -31,9 +31,9 @@ Usamos [Github](https://github.com/) para el versionado. Para todas las versione
 
 ## Autores ✒️
 
-* **Farfán Chávez Mario José** - [villanuevand](https://github.com/villanuevand)
+* **Farfán Chávez Mario José** - [MarioFarfan](https://github.com/MarioFarfan)
 * **Herrera Mendoza Juan Antonio** - [fulanitodetal](#fulanito-de-tal)
-* **Pineda Nivón Aimée Jahdaí** - [fulanitodetal](#fulanito-de-tal)
+* **Pineda Nivón Aimée Jahdaí** - [EmePin](https://github.com/EmePin)
 
 
 
